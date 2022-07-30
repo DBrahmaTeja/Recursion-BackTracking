@@ -1,0 +1,20 @@
+void printall(int ind,int n,int opencnt,int closecnt,string &str)
+{
+    if(ind==2*n)
+    {
+        cout<<str<<endl;
+        return;
+    }
+    if(opencnt<n)
+    {
+        str.push_back('(');
+        printall(ind+1,n,opencnt+1,closecnt,str);
+        str.pop_back();
+    }
+    if(opencnt>closecnt)
+    {
+        str.push_back(')');
+        printall(ind+1,n,opencnt,closecnt+1,str);
+        str.pop_back();
+    }
+}
