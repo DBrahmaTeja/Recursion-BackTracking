@@ -2,7 +2,10 @@
 
 Approach:  
 
-The extreme naive solution is to generate all the possible permutations of the given sequence.  This is achieved using recursion and every permutation generated is stored in some other data structure (here we have used a vector). Finally, we sort the data structure in which we have stored all the sequences and return the Kth sequence from it.
+The extreme naive solution is to generate all the possible permutations of the given sequence.
+  This is achieved using recursion and every permutation generated is stored in
+   some other data structure (here we have used a vector). 
+   Finally, we sort the data structure in which we have stored all the sequences and return the Kth sequence from it.
 
 Code: */
 
@@ -55,7 +58,8 @@ The Kth permutation sequence is 213
 
 Time complexity: O(N! * N) +O(N! Log N!)
 
-Reason:  The recursion takes O(N!)  time because we generate every possible permutation and another O(N)  time is required to make a deep copy and store every sequence in the data structure. Also, O(N! Log N!)  time required to sort the data structure
+Reason:  The recursion takes O(N!)  time because we generate every possible permutation and another O(N)  time is required to make a 
+deep copy and store every sequence in the data structure. Also, O(N! Log N!)  time required to sort the data structure
 
 Space complexity: O(N) 
 
@@ -84,7 +88,9 @@ The 18th – 23rd permutation will start with 4.
 
 
 
-We make K = 17-1 considering 0-based indexing. Since each of the four blocks illustrated above comprises 6 permutations, therefore, the 16th permutation will lie in (16 / 6 ) = 2nd block, and our answer is the (16 % 6) = 4th sequence from the 2nd block. Therefore 3 occupies the first position of the sequence and K = 4.
+We make K = 17-1 considering 0-based indexing. Since each of the four blocks illustrated above comprises 6 permutations, therefore,
+the 16th permutation will lie in (16 / 6 ) = 2nd block, and our answer is the (16 % 6) = 4th sequence from the 2nd block.
+Therefore 3 occupies the first position of the sequence and K = 4.
 
 
 
